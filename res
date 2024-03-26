@@ -76,3 +76,35 @@ dados_longos <- gather(dados_largos, ano, idade, idade_2019:idade_2020)
 
 # Transformando os dados de formato longo para largo
 dados_largos <- spread(dados_longos, key = ano, value = idade)
+
+
+
+##########################
+
+
+string <- "banana"
+for (i in 1:nchar(string)) {
+  nova_string <- paste(substr(string, 1, i - 1), "x", substr(string, i + 1, nchar(string)), sep = "")
+  print(nova_string)
+}
+# Saída:
+# "xanana"
+# "bxnana"
+# "banana"
+# "banxna"
+# "banaxa"
+# "bananx"
+
+
+
+###############
+
+
+
+
+string1 <- "Olá"
+string2 <- "mundo"
+concatenado <- paste(string1, string2)
+# Ou use paste0() para evitar espaços extras
+# concatenado <- paste0(string1, string2)
+print(concatenado)  # Saída: "Olá mundo"
